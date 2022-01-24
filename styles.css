@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+    --border-color: #e3e5e4;
+    --background-color:#c3c7ca;
+    --text-color: #34444f;
+}
+
+body{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+.draggable-list{
+    border: 0.06rem solid var(--border-color);
+    color: var(--text-color);
+    padding: 0;
+    list-style-type: none;
+}
+
+.draggable-list li{
+    background-color: #fff;
+    display: flex;
+}
+
+.draggable-list li:not(:last-of-type){
+    border-bottom: 0.06rem solid var(--border-color);
+}
+
+.number{
+    background-color: var(--background-color);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.75rem;
+    width: 3.75rem;
+}
+
+.person-name{
+    margin: 0 1.25rem 0 0;
+}
+
+.draggable{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.right{
+    color:#3ae374
+}
+
+.wrong{
+    color: #ff3838;
+}
+
+.draggable-list li.over .draggable{
+    background-color: #eaeaea;
+}
+
+.check-btn{
+    background-color:var(--background-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.check-btn:active{
+    transform: scale(0.9);
+}
